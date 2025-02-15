@@ -1,0 +1,151 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: #121212;
+    color: #6BCB77;
+    font-size: 18px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none; /* Prevents interactions from blocking clicks */
+    
+}
+
+
+/* Navbar */
+.navbar {
+    background-color: rgba(31, 31, 31, 0.9) !important;
+    padding: 10px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999; /* Ensures it's always above content */
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    color: #FF6B6B !important;
+}
+
+.nav-link {
+    color: #6BCB77 !important;
+    transition: color 0.3s ease;
+    margin: 0 15px;
+}
+
+.nav-link:hover {
+    color: #4D96FF !important;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.3); /* Reduced opacity */
+    backdrop-filter: blur(5px); /* Optional: Adds a glass effect */
+    box-shadow: none; /* Removes shadow to avoid covering canvas */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #6BCB77;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: #E0E0E0;
+}
+
+/* Project Cards */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #6BCB77;
+    border-radius: 15px;
+    padding: 20px;
+    width: 320px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(107, 203, 119, 0.7);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    margin: 10px 0;
+    color: #6BCB77;
+}
+
+.project-card p {
+    color: #E0E0E0;
+    font-size: 1rem;
+    padding: 0 10px;
+}
+
+/* Footer Stickiness */
+main {
+    flex: 1; /* Pushes footer to bottom */
+}
+
+footer {
+    background-color: #1F1F1F;
+    padding: 20px;
+    text-align: center;
+    color: #6BCB77;
+    margin-top: auto;
+}
+
+footer a {
+    color: #4D96FF;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #FF6B6B;
+}
